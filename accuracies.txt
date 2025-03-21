@@ -1,0 +1,7 @@
+My Embedding - Valid: 77.03 (Overfit)
+GloVe - Valid: 80.31 -> 79.27
+GloVe - Test: 76.11 -> 76.64
+USE - Valid: 82.15 -> 84.38
+USE - Test: 79.39 -> 81.62
+BERT - Valid: 81.10
+BERT - Test: 78.22
