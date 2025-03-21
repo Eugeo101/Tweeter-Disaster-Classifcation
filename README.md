@@ -45,21 +45,30 @@ Meta-features were extracted to improve model performance:
 ## 🛠 4️⃣ Preprocessing (Text Cleaning)
 Text cleaning was performed to improve **embedding coverage** and model performance.
 
-**📉 Before Cleaning:**
-- **GloVe Embeddings Coverage:**
-  - **Training Set:** 52.06% vocabulary, 82.68% text
-  - **Test Set:** 57.21% vocabulary, 81.85% text
+### 🧠 Embedding Coverage Analysis
+To understand how well pre-trained embeddings represent our dataset, we analyzed **GloVe embedding coverage**:
 
-**⚡ Cleaning Steps:**
-- Removed **punctuations**, special characters, and symbols.
-- Expanded **contractions** (e.g., *can't → cannot*).
-- Removed **URLs, mentions, hashtags** (or expanded them when informative).
-- Corrected **typos, slang, and informal abbreviations**.
+| Dataset  | Vocabulary Coverage | Text Coverage |
+|----------|--------------------|--------------|
+| **Train** | 52.06%            | 82.68%       |
+| **Test**  | 57.21%            | 81.85%       |
 
-**📈 After Cleaning:**
-- **GloVe Embeddings Coverage:**
-  - **Training Set:** 82.89% vocabulary, 97.14% text
-  - **Test Set:** 88.09% vocabulary, 97.32% text
+---
+
+## 🧹 Text Preprocessing
+- **Punctuation Separation**: Detached trailing punctuation marks.
+- **Special Character Removal**: Removed characters like `@`, `#`, `!`, `?`, etc.
+- **Contraction Expansion**: Converted words like "can't" → "cannot".
+- **URL Removal**: Eliminated all links.
+- **Entity Replacement**: Replaced character entity references with actual symbols.
+- **Typo & Slang Correction**: Standardized informal text.
+- **Hashtag & Username Expansion**: Separated meaningful hashtags into readable words.
+
+### ✅ Post-Cleaning Embedding Coverage
+| Dataset  | Vocabulary Coverage | Text Coverage |
+|----------|--------------------|--------------|
+| **Train** | 82.89%            | 97.14%       |
+| **Test**  | 88.09%            | 97.32%       |
 
 ---
 
